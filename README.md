@@ -1,6 +1,6 @@
 ## HangmanApp
 ABOUT
-This project is showing a demo of an Angular app using HTML, AngularJS, Git and Node.js
+This project is showing a demo of an Angular app using HTML, CSS, Bootstrap, AngularJS, Git and Node.js
 
 INSTALLING
 
