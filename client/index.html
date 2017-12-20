@@ -2,40 +2,40 @@
 <head>
   <meta charset="utf-8">
   <title>Hangman App</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
-  <script src="app.js"></script>
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet"href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+ <script src="https://use.fontawesome.com/cc22b00071.js"></script>
 </head>
 <body ng-app="HangmanApp" ng-controller="GameController">
-<div>
+<div class="container">
+  <h1>Hangman</h1>
+  <img src="img/cowboy.svg"><br><br>
   <div>
-    <p> Guesses Left :: {{guesses}} </p>
+    <p><i class="fa fa-heartbeat" aria-hidden="true"></i> Guesses Left: {{guesses}} </p>
   </div>
   <div>
-   <p> Incorrect Guesses :: </p>
+    <p><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Correct Guesses: 
+    <span ng-repeat="letter in correctLettersChosen">{{letter}}</span>
+    </p>
+  </div>
+  <div>
+    <p><i class="fa fa-thumbs-o-down" aria-hidden="true"></i> Incorrect Guesses: 
     <span ng-repeat="letter in incorrectLettersChosen">{{letter}}</span>
+    </p>
   </div> 
   <div>
-    <p> Correct Guesses :: </p>
-    <span ng-repeat="letter in correctLettersChosen">{{letter}}</span>
-  </div>
-  <div>
-    You have to guess {{displayWord}}
+    <p><i class="fa fa-star-o" aria-hidden="true"></i> You have to guess {{displayWord}} </p>
   </div>
   <div>
   <div>
-    <input type = "text" name = "guess" ng-model = "input.letter">
-    <button ng-click = "letterChosen()">Submit</button>
+    <input type="text" name="guess" ng-model="input.letter" class="input">
+    <button ng-click = "letterChosen()" class="button button5">Submit</button>
   </div>
   </div>   
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+<script src="app.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 </body>
-<script>
-    $(function() {
-        $(".dial").knob({
-          'min':0,
-        'max':6
-        }).trigger('change');
-
-    });
-</script>
 </html>
