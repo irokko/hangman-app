@@ -2,6 +2,9 @@
 ABOUT
 This project is showing a demo of an Angular app using HTML, CSS, Bootstrap, AngularJS, Git and Node.js
 
+DEMO
+https://hangman-angular-man-rokkochan.c9users.io/client/
+
 INSTALLING
 
 Windows:
